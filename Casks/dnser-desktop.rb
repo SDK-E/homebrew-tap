@@ -1,7 +1,7 @@
 cask "dnser-desktop" do
   version "1.1.0-rc1"
-  sha256 arm:   "5217482f81a30c32b92b88534f194e4af8f66b69f768ebe495f40eb4d58eb1e6",
-         intel: "5d60b58009932561f5e31a10f6cee10271218156f4ab53d02559aa8912606eb1"
+  sha256 arm:   "6ec1bcbff72d15f217ca6ee19f9e48e7c205312c1b99e26eaed7f51ac31621c5",
+         intel: "7f813da0aaa3b94f4be76199d0756ab1cf6ee90995b13217f8723251dd3d2e9f"
 
   on_arm do
     url "https://github.com/SDK-E/dnser/releases/download/v1.1.0-rc1/DNSer_#{version}_macOS_arm64.dmg"
