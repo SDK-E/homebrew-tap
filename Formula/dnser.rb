@@ -1,7 +1,7 @@
 class Dnser < Formula
   desc "Local DNS management for development"
   homepage "https://github.com/SDK-E/dnser"
-  version "1.0.5"
+  version "1.0.6"
   license "BUSL-1.1"
 
   livecheck do
