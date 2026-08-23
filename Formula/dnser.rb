@@ -12,19 +12,19 @@ class Dnser < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/SDK-E/dnser/releases/download/v1.0.7-rc4/dnser_1.0.7-rc4_Darwin_arm64.tar.gz"
-      sha256 "1871405f5716b17ff06143ec349f4adc85442c62b35fd6eeb5ddd537fa78a3c2"
+      sha256 "1fbda55ce280aff4c4088db857ad74fe8ed83172d2bf48e25eefc009f82ba2af"
     else
       url "https://github.com/SDK-E/dnser/releases/download/v1.0.7-rc4/dnser_1.0.7-rc4_Darwin_amd64.tar.gz"
-      sha256 "964044a4893807239fc93caf8b3888c6849f82fe25b8e4eee6cf9e4efb00df3a"
+      sha256 "bbab63aa9d6cbcbb3d7ae3badd31cc4daa4004422190f66ee74d6c8649cce86d"
     end
   end
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/SDK-E/dnser/releases/download/v1.0.7-rc4/dnser_1.0.7-rc4_Linux_amd64.tar.gz"
-      sha256 "71afd42d42ac3b7433cc49ac9fa106af9f6b283f4c0d684e8ada9a6264429798"
+      sha256 "a6222936fb1779b59e3deda8f8ac26b51cb84e207132caf4c061f5597fc837d2"
     else
       url "https://github.com/SDK-E/dnser/releases/download/v1.0.7-rc4/dnser_1.0.7-rc4_Linux_arm64.tar.gz"
-      sha256 "0eb89a96b808577b04dfbe817140172fb472a5670954dd3c696a337c8914d564"
+      sha256 "4d20b45f0143985c0cd49b837b5d90d660914c3281b757e07b806933b55e1a95"
     end
   end
 
