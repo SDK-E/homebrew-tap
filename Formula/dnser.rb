@@ -11,21 +11,20 @@ class Dnser < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/SDK-E/dnser/releases/download/v#{version}/dnser_#{version}_Darwin_arm64.tar.gz"
-      sha256 "b52ae81ce14499e7d948c17ba683bf558bbd9403d1ccae73decfa1ce14d80c26"
+      url "https://github.com/SDK-E/dnser/releases/download/v1.0.6/dnser_1.0.6_Darwin_arm64.tar.gz"
+      sha256 "d082f70f7f92305d5da62943428a28db89eec43d1f252e5d50f57870f88e3d59"
     else
-      url "https://github.com/SDK-E/dnser/releases/download/v#{version}/dnser_#{version}_Darwin_amd64.tar.gz"
-      sha256 "cb355c8edec54605a18a9ce04193c801ab3d2258200e311d7f4e8c42d44bb106"
+      url "https://github.com/SDK-E/dnser/releases/download/v1.0.6/dnser_1.0.6_Darwin_amd64.tar.gz"
+      sha256 "21bb763eb9687d3ea26371ab47d2cac1c8b30b2cdde246e4dc69398a00bd812e"
     end
   end
-
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/SDK-E/dnser/releases/download/v#{version}/dnser_#{version}_Linux_arm64.tar.gz"
-      sha256 "609029f6d7dde15171401b38ea753c3fe83cbe449091c2ecedbeed7237d34b41"
+    if Hardware::CPU.intel?
+      url "https://github.com/SDK-E/dnser/releases/download/v1.0.6/dnser_1.0.6_Linux_amd64.tar.gz"
+      sha256 "021c104435cdef495c48e699cf46c7f233123ef0b83e128654cfc1858ffa550f"
     else
-      url "https://github.com/SDK-E/dnser/releases/download/v#{version}/dnser_#{version}_Linux_amd64.tar.gz"
-      sha256 "fbebf5a5df2ced500933b6b39d002b996eead636ce326c8e42bbf5d63775fd14"
+      url "https://github.com/SDK-E/dnser/releases/download/v1.0.6/dnser_1.0.6_Linux_arm64.tar.gz"
+      sha256 "7b2c7cbf89a5e39f4d46502610b1c3e84d22ce79aeb5e65500f375ee4ae68d8f"
     end
   end
 
@@ -35,12 +34,8 @@ class Dnser < Formula
 
   def caveats
     <<~EOS
-      Run the one-time guided setup:
+      Run the guided setup once:
         dnser setup
-
-      Setup starts dnser as a privileged daemon so port 53 works, verifies it,
-      and only then points your system DNS at it.
-      Dashboard: dnser open
     EOS
   end
 
