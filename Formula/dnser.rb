@@ -1,7 +1,7 @@
 class Dnser < Formula
   desc "Local DNS management for development"
   homepage "https://github.com/SDK-E/dnser"
-  version "1.0.6"
+  version "1.0.7-rc4"
   license "BUSL-1.1"
 
   livecheck do
@@ -11,20 +11,20 @@ class Dnser < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/SDK-E/dnser/releases/download/v1.0.6/dnser_1.0.6_Darwin_arm64.tar.gz"
-      sha256 "d082f70f7f92305d5da62943428a28db89eec43d1f252e5d50f57870f88e3d59"
+      url "https://github.com/SDK-E/dnser/releases/download/v1.0.7-rc4/dnser_1.0.7-rc4_Darwin_arm64.tar.gz"
+      sha256 "1871405f5716b17ff06143ec349f4adc85442c62b35fd6eeb5ddd537fa78a3c2"
     else
-      url "https://github.com/SDK-E/dnser/releases/download/v1.0.6/dnser_1.0.6_Darwin_amd64.tar.gz"
-      sha256 "21bb763eb9687d3ea26371ab47d2cac1c8b30b2cdde246e4dc69398a00bd812e"
+      url "https://github.com/SDK-E/dnser/releases/download/v1.0.7-rc4/dnser_1.0.7-rc4_Darwin_amd64.tar.gz"
+      sha256 "964044a4893807239fc93caf8b3888c6849f82fe25b8e4eee6cf9e4efb00df3a"
     end
   end
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/SDK-E/dnser/releases/download/v1.0.6/dnser_1.0.6_Linux_amd64.tar.gz"
-      sha256 "021c104435cdef495c48e699cf46c7f233123ef0b83e128654cfc1858ffa550f"
+      url "https://github.com/SDK-E/dnser/releases/download/v1.0.7-rc4/dnser_1.0.7-rc4_Linux_amd64.tar.gz"
+      sha256 "71afd42d42ac3b7433cc49ac9fa106af9f6b283f4c0d684e8ada9a6264429798"
     else
-      url "https://github.com/SDK-E/dnser/releases/download/v1.0.6/dnser_1.0.6_Linux_arm64.tar.gz"
-      sha256 "7b2c7cbf89a5e39f4d46502610b1c3e84d22ce79aeb5e65500f375ee4ae68d8f"
+      url "https://github.com/SDK-E/dnser/releases/download/v1.0.7-rc4/dnser_1.0.7-rc4_Linux_arm64.tar.gz"
+      sha256 "0eb89a96b808577b04dfbe817140172fb472a5670954dd3c696a337c8914d564"
     end
   end
 
