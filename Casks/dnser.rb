@@ -38,15 +38,13 @@ cask "dnser" do
 
   binary "dnser"
 
-  uninstall launchctl: [
-      "enterprises.sdk.dnser",
-    ],
-    delete: [
-      "~/.dnser",
-    ]
-
+  # no uninstall stanza: brew runs it on every UPGRADE — purging ~/.dnser
+  # would destroy user journals/state. Full purge is opt-in via --zap.
   zap delete: [
       "~/.dnser",
+    ],
+    launchctl: [
+      "enterprises.sdk.dnser",
     ]
 
 end
